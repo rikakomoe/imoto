@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1 id="imoto-back-end-for-simple-applications">Imoto(妹) - Back-end for Simple Applications</h1>
+<p>Tired of writing back-ends? Drive your application by barely a front-end with Imoto and MySQL.</p>
+<h2 id="how-to-use-the-imoto">How To Use The Imoto</h2>
+<p>Say, now we want to build an application that provides a random &quot;Misaka&quot; on some webpage. The following
+  will tell you how to implement this using Imoto.</p>
+<h3 id="0x00-configuration">0x00 Configuration</h3>
+<ol>
+  <li>Copy <code>config.example.php</code> to <code>config.php</code>.</li>
+  <li>Create a database <code>misaka</code>.</li>
+  <li>Create a user of MySQL, grant it <code>SELECT</code> privilege of database <code>misaka</code>.</li>
+  <li>Fill in the user to <code>config.php</code>.</li>
+</ol>
+<h3 id="0x01-you-re-done-">0x01 You&#39;re done!</h3>
+<ol>
+  <li>Run Imoto at somewhere, say, <code>localhost:8000</code>.</li>
+  <li><p>Try this: </p>
+    <p><code>curl -H &quot;database: misaka&quot; -H &quot;Content-type: application/json&quot; -X POST -d &#39;&quot;SELECT
+      * FROM `misaka` ORDER BY RAND() LIMIT 1&quot;&#39; localhost:8000</code></p>
+  </li>
+</ol>
+<hr>
+</body>
+</html>
